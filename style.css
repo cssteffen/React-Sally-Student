@@ -1,0 +1,45 @@
+header, main {
+    padding: 20px;
+  }
+body {
+  background-color:#fff;
+}
+  h1,h2,h3,p {font-family:Arial, Helvetica, sans-serif;
+  }
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    background-color: rgb(240, 198, 62);
+    padding: 5px;
+  }
+/* unvisited link */
+  a:link {
+    color: gray;
+    text-decoration: none;
+  }
+
+/* visited link */
+a:visited {
+  color: rgb(83, 56, 5);
+}
+
+/* hover link */
+a:hover {
+  color: rgb(240, 198, 62);
+}
+
+footer address{
+  color: gray;
+  text-align: center;
+}
+/* 
+img {
+  float: left;
+}
+.education, .employment {
+  margin-left: 25px;
+}

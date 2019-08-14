@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sally Student's React Online Resume</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header role="banner" id="header"></header>
+    <main role="main">
+      <section class="Education" id="education"></section>
+      <section class="employment" id="employment"></section>
+    </main>
+    <footer role="contentinfo" id="footer"></footer>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      // ======HEADER INFO====== //
+
+      function AppHeader(props) {
+        console.log(props);
+        return <div>{props.children}</div>;
+      }
+
+      ReactDOM.render(
+        <AppHeader>
+          <h1>Sally Student</h1>
+          <address>
+            <p>
+              <a href="mailto:SallyStudent@gmail.com">SallyStudent@gmail.com</a>
+              <br />
+              <a href="tel:+303-555-1234">+303-555-1234</a>
+              <br />
+            </p>
+          </address>
+          <img
+            src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+            alt="Sally Student Photo"
+          />
+        </AppHeader>,
+        document.querySelector(`#header`)
+      );
+
+      // ======EDUCATION INFO====== //
+
+      function AppEd(props) {
+        console.log(props);
+        return <div>{props.children}</div>;
+      }
+
+      ReactDOM.render(
+        <AppEd>
+          <h2>Education</h2>
+          <p>
+            <b>Arizona State University</b> // 2019
+          </p>
+          <p>
+            Degree in Internet & Web Development
+            <br />
+            <em>Deans List - 2017, 2018</em>
+          </p>
+        </AppEd>,
+        document.querySelector(`#education`)
+      );
+      // ======EMPLOYMENT INFO====== //
+
+      function AppEmp(props) {
+        console.log(props);
+        return <div>{props.children}</div>;
+      }
+
+      ReactDOM.render(
+        <AppEmp>
+          <h2>Employment</h2>
+          <div className="job">
+            <h3>Barista</h3>
+            <p>
+              <em>Starbucks // 2013-2019</em>
+            </p>
+            <p>
+              Lorem Ipsum is not simply random text. It has roots in a piece of
+              classical Latin literature from 45 BC, making it over 2000 years
+              old. Richard McClintock, a Latin professor at Hampden-Sydney
+              College in Virginia.
+            </p>
+          </div>
+          <div className="job">
+            <h3>Graphic Designer</h3>
+            <p>
+              <em>Treadstone LLC. // 2013-2015</em>
+            </p>
+            <p>
+              Lorem Ipsum is not simply random text. It has roots in a piece of
+              classical Latin literature from 45 BC, making it over 2000 years
+              old. Richard McClintock, a Latin professor at Hampden-Sydney
+              College in Virginia.
+            </p>
+          </div>
+        </AppEmp>,
+        document.querySelector(`#employment`)
+      );
+
+      // ======FOOTER INFO====== //
+
+      function AppFooter(props) {
+        console.log(props);
+        return <div>{props.children}</div>;
+      }
+
+      ReactDOM.render(
+        <AppFooter>
+          <address>
+            <p>
+              Sally Student |
+              <a href="mailto:SallyStudent@gmail.com">
+                SallyStudent@gmail.com |{" "}
+              </a>
+              <a href="tel:+303-555-1234">+303-555-1234</a>
+            </p>
+          </address>
+        </AppFooter>,
+        document.querySelector(`#footer`)
+      );
+    </script>
+  </body>
+</html>
